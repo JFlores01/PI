@@ -1,3 +1,0 @@
-1-Diseño de la página con bootstrap
-2-Elementos de la página han de funcionar
-3-Carrito de compra
