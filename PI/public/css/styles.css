@@ -49,6 +49,25 @@ header > nav > i {
     font-size: 2rem;
     cursor: pointer;
 
+    position: relative;
+}
+
+.amountProductos {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: -5px;
+    top: 15px;
 }
 
 /* Products */
@@ -89,6 +108,15 @@ header > nav > i {
     font-size: 0.8rem;
 }
 
+.product__info .soldout {
+    display: inline-block;
+    color: white;
+    background-color: lightcoral;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    user-select: none;
+}
+
 .product__info .bx-plus{
     background-color: black;
     padding: 1rem;
@@ -121,7 +149,7 @@ header > nav > i {
     right: 0;
 }
 
-.card__products{
+.cart__products{
     
     height: 85%;
     overflow-y: scroll;
@@ -131,7 +159,7 @@ header > nav > i {
     gap: 1rem;
 }
 
-.card__product {
+.cart__product {
     
     box-shadow: var(--general-shadow);
     padding: 1rem;
@@ -141,14 +169,14 @@ header > nav > i {
     border-radius: 1rem;
 }
 
-.card__product--img{
+.cart__product--img{
     width: 40%;
     background-color: #ccc;
     border-radius: 1rem;
 }
 
 
-.card__product--body{
+.cart__product--body{
     width: 60%;
     padding: 1rem;
 
@@ -157,20 +185,48 @@ header > nav > i {
     gap: 0.3rem;
 }
 
-.card__product--body-op{
+.cart__product--body-op{
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.card__product--body-op .bxs-trash{
+.cart__product--body-op .bxs-trash{
     color: lightcoral;
 }
 
-.card__total {
-    background-color: green;
+.cart__product--body-op i {
+    cursor: pointer;
+}
+
+.cart__total {
+    
     height: 15%;
     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.cart__total--info{
+    
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn__buy{
+    padding: 0.5rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 @media (max-width) {

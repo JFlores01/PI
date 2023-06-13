@@ -37,9 +37,9 @@ app.set('view engine', 'ejs');
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 //Llamadas a las rutas
-app.get('/', (req, res) => {
-  res.render('index');
-});
+app.use('/', require('./router/rutas'))
+app.use('/index', require('./router/rutas'))
+
 
 //Error controller
 app.use((req, res) => {
